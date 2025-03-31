@@ -7,15 +7,17 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             body {
-                background-color: #f9f9f9;
-                color: #7a7a7a;
-                font-family: 'Noto Sans JP', sans-serif;
                 margin: 0;
+                padding: 20px;
                 display: flex;
+                font-family: 'Noto Sans JP', sans-serif;
                 justify-content: center;
+                flex-wrap: wrap;
                 align-items: center;
                 min-height: 100vh;
-                padding: 20px;
+                background-color: #f9f9f9;
+                color: #7a7a7a;
+                position: relative;
             }
             .container {
                 max-width: 600px;
@@ -83,13 +85,13 @@
             .bg-img {
                 width: 100%;
                 display: flex;
-                height: 120px;
-                bottom: -60px;
                 position: absolute;
+                height: 120px;
+                bottom: 0;
                 z-index: -1;
             }
             .bg-img img {
-                margin: 0 1em 0 auto;
+                margin: 0 20px 0 auto;
                 width: 120px;
                 max-width: 20%;
                 height: auto;
