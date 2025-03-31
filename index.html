@@ -89,7 +89,10 @@
                 </dl>
             </div>
             <div class="footer">
-                <p class="notice-small">Copyright &copy; <?= date("Y"); ?> Fujiya Business Partners 株式会社 All Rights Reserved.</p>
+                <p class="notice-small">Copyright &copy; <span id="currentYear"></span> Fujiya Business Partners 株式会社 All Rights Reserved.</p>
+                <script>
+                    document.getElementById('currentYear').textContent = new Date().getFullYear();
+                </script>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
