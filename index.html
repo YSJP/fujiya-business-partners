@@ -53,6 +53,22 @@
                 text-decoration: underline;
                 opacity: 0.4;
             }
+            .wrap-logic {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+
+            .wrap-item {
+                display: inline-block;
+            }
+
+            /* スペースのように振る舞うが、改行されると消える */
+            .wrap-item:first-child::after {
+                content: " ";
+                white-space: pre;
+            }
+
             .notice-small {
                 margin-top: 0.2rem;
                 font-size: 0.8rem;
@@ -95,11 +111,17 @@
             <div class="main-content">
                 <dl class="list-data">
                     <dt>会社名</dt>
-                    <dd>Fujiya Business Partners 株式会社</dd>
+                    <dd class="wrap-logic">
+                        <span class="wrap-item">Fujiya Business Partners</span>
+                        <span class="wrap-item">株式会社</span>
+                    </dd>
                     <dt>代表者</dt>
                     <dd>藤井 大史郎</dd>
                     <dt>所在地</dt>
-                    <dd>〒380-0841 長野市大門町80</dd>
+                    <dd class="wrap-logic">
+                        <span class="wrap-item">〒380-0841</span>
+                        <span class="wrap-item">長野市大門町80</span>
+                    </dd>
                     <dt>メール</dt>
                     <dd>
                         <a href="mailto:fujiya-bp@fujiyagohonjin.co.jp">fujiya-bp@fujiyagohonjin.co.jp</a>
