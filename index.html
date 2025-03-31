@@ -53,17 +53,17 @@
                 text-decoration: underline;
                 opacity: 0.4;
             }
+
             .wrap-logic {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: flex-start;
+                text-align: center; /* 中央寄せ */
+                display: block;
             }
 
             .wrap-item {
                 display: inline-block;
             }
 
-            /* スペースのように振る舞うが、改行されると消える */
+            /* 最初の span のあとに半角スペースを追加（改行時には無視される） */
             .wrap-item:first-child::after {
                 content: " ";
                 white-space: pre;
