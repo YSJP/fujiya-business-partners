@@ -33,7 +33,7 @@ body {
     text-align: center;
 }
 .logo {
-    margin: 20px auto;
+    margin: 0 auto;
     width: 120px;
     max-width: 100%;
     height: auto;
@@ -76,6 +76,11 @@ a:hover {
 .wrap-item:first-child::after {
     content: "\0020"; /* ← 半角スペースを明示的に指定 */
     white-space: pre;
+}
+
+/* フッター */
+.footer {
+    text-align: center;
 }
 
 .notice-small {
