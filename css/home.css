@@ -58,7 +58,7 @@ dd {
 }
 a {
     color: #5a5a5a;
-    text-decoration: none;
+    text-decoration: underline;
     transition: all .4s ease;
 }
 a:hover {
