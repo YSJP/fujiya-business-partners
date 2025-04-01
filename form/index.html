@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>リダイレクト中｜お問い合わせフォーム｜Fujiya Business Partners 株式会社</title>
-  <link rel="stylesheet" href="./css/home.css" />
+  <link rel="stylesheet" href="../css/home.css" />
   <style>
     .main-content {
       display: flex;
@@ -19,20 +19,19 @@
       padding: 20px;
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .redirect-box p {
       font-size: 18px;
       font-weight: bold;
-      color: #555;
+      color: #7a7a7a;
       line-height: 1.6;
     }
 
     .loader {
       margin: 30px auto;
       border: 8px solid #f3f3f3;
-      border-top: 8px solid #333;
+      border-top: 8px solid #7a7a7a;
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -50,7 +49,7 @@
 
   <div class="container">
     <div class="logo">
-      <img src="img/logo-fbp.png" alt="Fujiya Business Partners Logo" class="logo" />
+      <img src="../img/logo-fbp.png" alt="Fujiya Business Partners Logo" class="logo" />
     </div>
 
     <div class="main-content">
@@ -69,19 +68,16 @@
   </div>
 
   <div class="bg-img">
-    <img src="img/whats_next.png" alt="What's Next Image">
+    <img src="../img/whats_next.png" alt="What's Next Image">
   </div>
 
   <script>
-    // 一時停止中（リダイレクトしたいときは解除）
-    /*
     setTimeout(() => {
       const queryString = window.location.search;
       const baseURL = "https://forms.gle/sM2a2xf3QCdKRvLa6";
       const redirectURL = queryString ? `${baseURL}${queryString}` : baseURL;
       window.location.href = redirectURL;
     }, 1000);
-    */
   </script>
 </body>
 </html>
