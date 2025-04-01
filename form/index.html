@@ -1,83 +1,128 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>リダイレクト中｜お問い合わせフォーム｜Fujiya Business Partners 株式会社</title>
-  <link rel="stylesheet" href="../css/home.css" />
-  <style>
-    .main-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 60vh;
-      text-align: center;
-    }
+  <head>
+    <!-- 基本メタ情報 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport-fit" content="cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Fujiya Business Partners 株式会社">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../img/favicon/favicon-144x144.png">
+    <meta name="msapplication-config" content="../img/favicon/browserconfig.xml">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
 
-    .redirect-box {
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-    }
+    <!-- ページ情報 -->
+    <title>リダイレクト中｜お問い合わせフォーム｜Fujiya Business Partners 株式会社</title>
+    <meta name="description" content="お問い合わせフォームの最新のURLにリダイレクトするページです。">
+    <meta name="keywords" content="お問い合わせフォーム, リダイレクト, Fujiya Business Partners, ビジネス支援, 中小企業, 課題解決, 変革, 長野市">
+    <meta name="author" content="Fujiya Business Partners 株式会社">
 
-    .redirect-box p {
-      font-size: 18px;
-      font-weight: bold;
-      color: #555;
-      line-height: 1.6;
-    }
+    <!-- ファビコン -->
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../img/favicon/favicon-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/favicon-180x180.png">
 
-    .loader {
-      margin: 30px auto;
-      border: 8px solid #f3f3f3;
-      border-top: 8px solid #333;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-    }
+    <!-- OGP基本情報 -->
+    <meta property="og:title" content="お問い合わせフォーム｜Fujiya Business Partners 株式会社">
+    <meta property="og:description" content="Fujiya Business Partners 株式会社へのお問い合わせはこちらから。中小企業の課題解決をサポートします。">
+    <meta property="og:image" content="https://fujiya-bp.com/img/contact-form.png">
+    <meta property="og:url" content="https://fujiya-bp.com/form/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fujiya Business Partners">
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-</head>
-<body>
-  <div class="emboss-background"></div>
+    <!-- Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="お問い合わせフォーム｜Fujiya Business Partners 株式会社">
+    <meta name="twitter:description" content="Fujiya Business Partners 株式会社へのお問い合わせはこちらから。中小企業の課題解決をサポートします。">
+    <meta name="twitter:image" content="https://fujiya-bp.com/img/contact-form.png">
 
-  <div class="container">
-    <div class="logo">
-      <img src="../img/logo-fbp.png" alt="Fujiya Business Partners Logo" class="logo" />
-    </div>
+    <!-- スタイルシート -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css" />
+    <style>
+      .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 60vh;
+        text-align: center;
+      }
 
-    <div class="main-content">
-      <div class="redirect-box">
-        <p>お問い合わせフォームの<br>最新のURLにリダイレクト中です...</p>
-        <div class="loader"></div>
+      .redirect-box {
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+      }
+
+      .redirect-box p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .loader {
+        margin: 30px auto;
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #333;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="emboss-background"></div>
+
+    <div class="container">
+      <div class="logo">
+        <img src="../img/logo-fbp.png" alt="Fujiya Business Partners Logo" class="logo" />
+      </div>
+
+      <div class="main-content">
+        <div class="redirect-box">
+          <p>お問い合わせフォームの<br>最新のURLにリダイレクト中です...</p>
+          <div class="loader"></div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p class="notice-small">Copyright &copy; <span id="currentYear"></span> Fujiya Business Partners 株式会社 All Rights Reserved.</p>
+        <script>
+          document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
       </div>
     </div>
 
-    <div class="footer">
-      <p class="notice-small">Copyright &copy; <span id="currentYear"></span> Fujiya Business Partners 株式会社 All Rights Reserved.</p>
-      <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-      </script>
+    <div class="bg-img">
+      <img src="../img/whats_next.png" alt="What's Next Image">
     </div>
-  </div>
 
-  <div class="bg-img">
-    <img src="../img/whats_next.png" alt="What's Next Image">
-  </div>
-
-  <script>
-    /*setTimeout(() => {
-      const queryString = window.location.search;
-      const baseURL = "https://forms.gle/sM2a2xf3QCdKRvLa6";
-      const redirectURL = queryString ? `${baseURL}${queryString}` : baseURL;
-      window.location.href = redirectURL;
-    }, 1000);*/
-  </script>
-</body>
+    <script>
+      /*setTimeout(() => {
+        const queryString = window.location.search;
+        const baseURL = "https://forms.gle/sM2a2xf3QCdKRvLa6";
+        const redirectURL = queryString ? `${baseURL}${queryString}` : baseURL;
+        window.location.href = redirectURL;
+      }, 1000);*/
+    </script>
+  </body>
 </html>
