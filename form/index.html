@@ -18,7 +18,7 @@
         }
 
         .container {
-            max-width: 600px;
+            width: 600px;
             text-align: center;
             padding: 30px;
             border: none;
@@ -26,6 +26,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #ffffff;
             margin: 20px auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+            position: relative;
         }
 
         /* メッセージボックス */
@@ -34,7 +39,6 @@
             padding: 20px;
             border-radius: 10px;
             background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .redirect-box p {
@@ -45,12 +49,12 @@
 
         /* ローディングアニメーション */
         .loader {
-            margin: 20px auto;
+            margin: 40px auto;
             border: 8px solid #f3f3f3;
             border-top: 8px solid #333; /* ダークグレー */
             border-radius: 50%;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             animation: spin 1s linear infinite;
         }
 
@@ -63,7 +67,7 @@
         .footer {
             position: absolute;
             bottom: 10px;
-            width: 100%;
+            width: 600px;
             text-align: center;
             font-size: 14px;
             color: #555; /* ダークグレー */
