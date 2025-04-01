@@ -12,7 +12,6 @@ body {
     position: relative;
 }
 .container {
-    /* 中央寄せや高さは container ではなく main-content に任せる */
     max-width: 600px;
     text-align: center;
     padding: 30px;
@@ -23,15 +22,17 @@ body {
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 中身（上＋中央＋footer）を整列 */
-    min-height: calc(100vh - 40px);
-  }
-  .main-content {
+    justify-content: center;
+    min-height: calc(100vh - 40px); /* 画面高に揃える */
+}
+.main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-grow: 1;
-  }
+    text-align: center;
+}
 .logo {
     margin: 0 auto;
     width: 120px;
