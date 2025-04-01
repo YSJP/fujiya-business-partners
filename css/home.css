@@ -13,7 +13,6 @@ body {
 }
 .container {
     max-width: 600px;
-    text-align: center;
     padding: 30px;
     border: none;
     border-radius: 8px;
@@ -22,8 +21,8 @@ body {
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh - 40px); /* 画面高に揃える */
+    justify-content: space-between; /* 上からロゴ・メイン・フッターで均等配置 */
+    min-height: calc(100vh - 40px); /* ビューポート高 - 上下マージン */
 }
 .main-content {
     display: flex;
