@@ -17,6 +17,17 @@
             margin: 0;
         }
 
+        .container {
+            max-width: 600px;
+            text-align: center;
+            padding: 30px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            margin: 20px auto;
+        }
+
         /* メッセージボックス */
         .redirect-box {
             text-align: center;
@@ -60,21 +71,23 @@
     </style>
 </head>
 <body>
-    <div class="redirect-box">
-        <p>
-            お問い合わせフォームの<br>
-            最新のURLにリダイレクト中です...
-        </p>
-        <div class="loader"></div>
-    </div>
+    <div class="container">
 
-    <div class="footer">
-      <p class="notice-small">Copyright &copy; <span id="currentYear"></span> Fujiya Business Partners 株式会社 All Rights Reserved.</p>
-      <script>
-          document.getElementById('currentYear').textContent = new Date().getFullYear();
-      </script>
-    </div>
+        <div class="redirect-box">
+            <p>
+                お問い合わせフォームの<br>
+                最新のURLにリダイレクト中です...
+            </p>
+            <div class="loader"></div>
+        </div>
 
+        <div class="footer">
+        <p class="notice-small">Copyright &copy; <span id="currentYear"></span> Fujiya Business Partners 株式会社 All Rights Reserved.</p>
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+        </div>
+    </div>
     <script>
         setTimeout(() => {
             // 現在のURLのクエリパラメーターを取得
