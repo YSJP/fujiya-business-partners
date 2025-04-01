@@ -1,109 +1,87 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>リダイレクト中｜お問い合わせフォーム｜Fujiya Business Partners 株式会社</title>
-    <style>
-        /* 共通フォント設定 */
-        body {
-            font-family: inter-var, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background:#f9f9f9;
-            margin: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>リダイレクト中｜お問い合わせフォーム｜Fujiya Business Partners 株式会社</title>
+  <link rel="stylesheet" href="./css/home.css" />
+  <style>
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+    }
 
-        .container {
-            width: 600px;
-            text-align: center;
-            padding: 30px;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
-            margin: 20px auto;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            flex-flow: column;
-            position: relative;
-        }
+    .redirect-box {
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        /* メッセージボックス */
-        .redirect-box {
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            background: white;
-        }
+    .redirect-box p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #555;
+      line-height: 1.6;
+    }
 
-        .redirect-box p {
-            font-size: 16px;
-            font-weight: bold;
-            color: #333;
-        }
+    .loader {
+      margin: 30px auto;
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #333;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
 
-        /* ローディングアニメーション */
-        .loader {
-            margin: 40px auto;
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #333; /* ダークグレー */
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* フッター */
-        .footer {
-            position: absolute;
-            bottom: 10px;
-            width: 600px;
-            text-align: center;
-            font-size: 14px;
-            color: #555; /* ダークグレー */
-        }
-    </style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
+  <div class="emboss-background"></div>
 
-        <div class="redirect-box">
-            <p>
-                お問い合わせフォームの<br>
-                最新のURLにリダイレクト中です...
-            </p>
-            <div class="loader"></div>
-        </div>
-
-        <div class="footer">
-        <p class="notice-small">Copyright &copy; <span id="currentYear"></span> Fujiya Business Partners 株式会社 All Rights Reserved.</p>
-        <script>
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        </script>
-        </div>
+  <div class="container">
+    <div class="logo">
+      <img src="img/logo-fbp.png" alt="Fujiya Business Partners Logo" class="logo" />
     </div>
-    <script>
-        //setTimeout(() => {
-            // 現在のURLのクエリパラメーターを取得
-            //const queryString = window.location.search;
-            //const baseURL = "https://forms.gle/sM2a2xf3QCdKRvLa6";
 
-            // クエリパラメータがあれば追加
-            //const redirectURL = queryString ? `${baseURL}${queryString}` : baseURL;
+    <div class="main-content">
+      <div class="redirect-box">
+        <p>お問い合わせフォームの<br>最新のURLにリダイレクト中です...</p>
+        <div class="loader"></div>
+      </div>
+    </div>
 
-            // リダイレクト
-            //window.location.href = redirectURL;
-        //}, 1000);
-    </script>
+    <div class="footer">
+      <p class="notice-small">Copyright &copy; <span id="currentYear"></span> Fujiya Business Partners 株式会社 All Rights Reserved.</p>
+      <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </div>
+
+  <div class="bg-img">
+    <img src="img/whats_next.png" alt="What's Next Image">
+  </div>
+
+  <script>
+    // 一時停止中（リダイレクトしたいときは解除）
+    /*
+    setTimeout(() => {
+      const queryString = window.location.search;
+      const baseURL = "https://forms.gle/sM2a2xf3QCdKRvLa6";
+      const redirectURL = queryString ? `${baseURL}${queryString}` : baseURL;
+      window.location.href = redirectURL;
+    }, 1000);
+    */
+  </script>
 </body>
 </html>
