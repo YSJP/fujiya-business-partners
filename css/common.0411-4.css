@@ -86,7 +86,20 @@
         text-decoration: none;
         font-size: 1.5rem;
     }
-
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+      }
+    .menu-close:hover {
+        color: #ccc;
+    }
     /* メインコンテンツ */
     .main-content {
         display: flex;

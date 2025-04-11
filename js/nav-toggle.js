@@ -15,6 +15,14 @@ function setupNavMenu() {
       menu.classList.remove('active');
     });
   });
+
+  const closeBtn = document.getElementById('menuClose');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      menu.classList.remove('active');
+    });
+  }
+
 }
 
 // nav.html の読み込み + 初期化
