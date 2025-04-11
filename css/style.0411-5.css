@@ -94,6 +94,10 @@
     margin-top: 1rem;
 }
 
+#page-faq .faq-answer p strong {
+    color: var(--bs-dark-text-emphasis)
+}.
+
 #page-faq .faq-answer a {
     color: #0066cc;
     text-decoration: underline;
