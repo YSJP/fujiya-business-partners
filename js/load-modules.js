@@ -16,6 +16,14 @@ const target = document.querySelector('.module-header-logo');
 if (target) target.innerHTML = html;
 });
 
+// ナビゲーションモジュールを読み込み
+fetch('/modules/nav.html')
+  .then(res => res.text())
+  .then(html => {
+    const nav = document.querySelector('.module-nav');
+    if (nav) nav.innerHTML = html;
+  });
+
 // フッター読み込み
 fetch('/includes/footer.html')
   .then(res => res.text())
