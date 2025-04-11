@@ -16,13 +16,9 @@ fetch('/includes/logo.html')
     if (target) target.innerHTML = html;
   });
 
-// ナビゲーションモジュールを読み込み
-fetch('/includes/nav.html')
-  .then(res => res.text())
-  .then(html => {
-    const nav = document.querySelector('.module-nav');
-    if (nav) nav.innerHTML = html;
-  });
+// ▼ ナビゲーションメニューの読み込みは nav-toggle.js に移管済み
+// The navigation module (/includes/nav.html) is loaded and initialized via nav-toggle.js,
+// so it is not handled here.
 
 // フッター読み込み
 fetch('/includes/footer.html')
