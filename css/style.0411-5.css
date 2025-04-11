@@ -4,7 +4,7 @@
 /* page-privacy｜プライバシーポリシー ************************************************************/
     #page-faq .faq-content {
     max-width: 800px;
-    margin: 4rem auto;
+    margin: 0;
     padding: 0 1.5rem;
     }
 
@@ -45,7 +45,7 @@
     width: 100%;
     font-size: 1rem;
     font-weight: 500;
-    color: #444;
+    color: #666;
     background: none;
     border: none;
     text-align: left;
@@ -58,8 +58,8 @@
     content: "+";
     position: absolute;
     right: 0;
-    top: 0;
-    font-size: 1.2rem;
+    top: -0.3rem;
+    font-size: 1.5rem;
     color: #999;
     transition: transform 0.3s;
     }
@@ -70,13 +70,15 @@
     }
 
     #page-faq .faq-answer {
+    margin-top: 0;
+    padding: 0 0.5rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
     font-size: 0.95rem;
     line-height: 1.6;
+    text-align: left;
     color: #555;
-    margin-top: 0;
     }
 
     #page-faq .faq-item.active .faq-answer {
@@ -90,7 +92,9 @@
     }
 
     #page-faq .faq-answer img {
-    max-width: 100%;
+    max-width: calc(100% - 0.5rem);
+    width: 200px;
+    height: auto;
     margin-top: 1rem;
     border-radius: 6px;
     }
