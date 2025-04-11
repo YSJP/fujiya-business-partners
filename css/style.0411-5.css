@@ -2,87 +2,98 @@
 
 
 /* page-privacy｜プライバシーポリシー ************************************************************/
-    #page-privacy dt {
-        margin-bottom: 1em;
-        text-align: center;
-    }
-    #page-privacy dd {
-        text-align: left;
-    }
-    #page-privacy .ol_list {
-        margin-top: 1rem;
-        text-align: left;
+    #page-faq .faq-content {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
     }
 
-/* page-faq｜よくあるご質問（FAQ) ************************************************************/
-    #page-faq .faq-content {
-        max-width: 800px;
-        margin: 4rem auto;
-        padding: 0 1.5rem;
-    }
     #page-faq .faq-heading {
-        font-size: 1.8rem;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
     }
+
     #page-faq .faq-intro {
-        text-align: center;
-        color: #666;
-        margin-bottom: 2.5rem;
-        font-size: 0.95rem;
+    text-align: center;
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
     }
+
     #page-faq .faq-section {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     }
+
     #page-faq .faq-item {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 1rem 1.25rem;
-        background-color: #fff;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        transition: box-shadow 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
     }
+
     #page-faq .faq-item:hover {
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
+
     #page-faq .faq-question {
-        width: 100%;
-        font-size: 1.05rem;
-        font-weight: bold;
-        background: none;
-        border: none;
-        text-align: left;
-        cursor: pointer;
-        position: relative;
-        padding-right: 2rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    padding-right: 2rem;
     }
 
     #page-faq .faq-question::after {
-        content: "+";
-        position: absolute;
-        right: 0;
-        top: 0;
-        font-size: 1.2rem;
-        color: #333;
-        transition: transform 0.2s;
-    }
-    #page-faq .faq-item.active .faq-question::after {
-        content: "−";
-    }
-    #page-faq .faq-answer {
-        display: none;
-        margin-top: 1rem;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: #444;
-    }
-    #page-faq .faq-item.active .faq-answer {
-        display: block;
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.2rem;
+    color: #999;
+    transition: transform 0.3s;
     }
 
+    #page-faq .faq-item.active .faq-question::after {
+    content: "\2212";
+    color: #666;
+    }
+
+    #page-faq .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 0;
+    }
+
+    #page-faq .faq-item.active .faq-answer {
+    max-height: 800px;
+    margin-top: 1rem;
+    }
+
+    #page-faq .faq-answer a {
+    color: #0066cc;
+    text-decoration: underline;
+    }
+
+    #page-faq .faq-answer img {
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 6px;
+    }
 
 /* page-form｜フォーム ************************************************************/
 
