@@ -10,11 +10,11 @@ fetch('/includes/head.html')
 
 // ロゴ（ヘッダー）読み込み
 fetch('/includes/logo.html')
-.then(res => res.text())
-.then(html => {
-const target = document.querySelector('.module-header-logo');
-if (target) target.innerHTML = html;
-});
+  .then(res => res.text())
+  .then(html => {
+    const target = document.querySelector('.module-header-logo');
+    if (target) target.innerHTML = html;
+  });
 
 // ナビゲーションモジュールを読み込み
 fetch('/includes/nav.html')
