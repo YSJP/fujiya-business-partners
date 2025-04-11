@@ -11,7 +11,6 @@
     };
   </script>
   <script src="/js/load-modules.js" defer></script>
-  <!-- JSにより head を読み込み -->
   <script src="/js/faq-toggle.js" defer></script>
 </head>
 
@@ -19,36 +18,44 @@
   <div class="emboss-background"></div>
 
   <div class="container">
-    <div class="module-nav"><!-- JSでnavを読み込み --></div>
-    <div class="module-header-logo"><!-- JSでロゴを読み込み --></div>
+    <div class="module-nav"></div>
+    <div class="module-header-logo"></div>
 
-    <div class="main-content">
-      <h1>よくあるご質問（FAQ）</h1>
+    <main class="main-content faq-content">
+      <h1 class="faq-heading">よくあるご質問（FAQ）</h1>
+      <p class="faq-intro">当社に多く寄せられるご質問とその回答をまとめました。</p>
+
       <section class="faq-section">
         <div class="faq-item">
-          <button class="faq-question">Q. サービスの対象地域は？</button>
+          <button class="faq-question" aria-expanded="false">
+            サービスの対象地域は？
+          </button>
           <div class="faq-answer">
-            A. 長野県内を中心に、必要に応じて全国対応も可能です。
+            長野県内を中心に、必要に応じて全国対応も可能です。
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question">Q. 初回相談は無料ですか？</button>
+          <button class="faq-question" aria-expanded="false">
+            初回相談は無料ですか？
+          </button>
           <div class="faq-answer">
-            A. はい、初回のご相談は無料です。お気軽にお問い合わせください。
+            はい、初回のご相談は無料です。お気軽にお問い合わせください。
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question">Q. サポート期間はどれくらいですか？</button>
+          <button class="faq-question" aria-expanded="false">
+            サポート期間はどれくらいですか？
+          </button>
           <div class="faq-answer">
-            A. プロジェクトに応じて、数週間から数ヶ月の継続支援を行います。
+            プロジェクトに応じて、数週間から数ヶ月の継続支援を行います。
           </div>
         </div>
       </section>
-    </div>
+    </main>
 
-    <div class="footer"><!-- JSでfooterを読み込み --></div>
+    <div class="footer"></div>
   </div>
 
   <div class="bg-img">

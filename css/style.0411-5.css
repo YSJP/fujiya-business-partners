@@ -1,7 +1,7 @@
-/* page-home｜ホーム */
+/* page-home｜ホーム ************************************************************/
 
 
-/* page-privacy｜プライバシーポリシー */
+/* page-privacy｜プライバシーポリシー ************************************************************/
     #page-privacy dt {
         margin-bottom: 1em;
         text-align: center;
@@ -14,75 +14,77 @@
         text-align: left;
     }
 
-/* page-faq｜よくあるご質問（FAQ)*/
-    /* FAQ全体のラッパー */
-    #page-faq .faq-section {
-        margin: 2rem 0;
-        padding: 0 1rem;
+/* page-faq｜よくあるご質問（FAQ) ************************************************************/
+    #page-faq .faq-content {
         max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 4rem auto;
+        padding: 0 1.5rem;
     }
-
-    /* 各QAアイテム */
-    #page-faq .faq-item {
-        border-bottom: 1px solid #ddd;
-        padding: 1.2rem 0;
+    #page-faq .faq-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1rem;
     }
-
-    /* 質問部分 */
-    #page-faq .faq-question {
+    #page-faq .faq-intro {
+        text-align: center;
+        color: #666;
+        margin-bottom: 2.5rem;
+        font-size: 0.95rem;
+    }
+    #page-faq .faq-section {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    #page-faq .faq-item {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem 1.25rem;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        transition: box-shadow 0.3s;
+    }
+    #page-faq .faq-item:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    #page-faq .faq-question {
         width: 100%;
         font-size: 1.05rem;
         font-weight: bold;
         background: none;
         border: none;
-        padding: 0;
         text-align: left;
         cursor: pointer;
         position: relative;
-        transition: color 0.2s;
+        padding-right: 2rem;
     }
 
-    /* +／− 記号の表示 */
     #page-faq .faq-question::after {
-        content: "＋";
+        content: "+";
+        position: absolute;
+        right: 0;
+        top: 0;
         font-size: 1.2rem;
-        color: #555;
+        color: #333;
         transition: transform 0.2s;
     }
-
-    /* アクティブ状態（展開中） */
     #page-faq .faq-item.active .faq-question::after {
-        content: "－";
-        color: #000;
+        content: "−";
     }
-
-    /* 回答部分 */
     #page-faq .faq-answer {
         display: none;
-        margin-top: 0.75rem;
+        margin-top: 1rem;
         font-size: 0.95rem;
         line-height: 1.6;
-        color: #333;
+        color: #444;
     }
-
-    /* 展開時に表示 */
     #page-faq .faq-item.active .faq-answer {
         display: block;
     }
 
-    /* フォーカス時の強調（アクセシビリティ） */
-    #page-faq .faq-question:focus {
-        outline: 2px solid #999;
-        outline-offset: 4px;
-    }
 
-
-/* page-form｜フォーム*/
+/* page-form｜フォーム ************************************************************/
 
     #page-form .redirect-box {
         padding: 20px;
