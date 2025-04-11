@@ -19,7 +19,7 @@
 /* page-faq｜よくあるご質問（FAQ) ************************************************************/
 #page-faq .faq-content {
     max-width: 800px;
-    margin: 0;
+    margin: 0 0 2rem;
     padding: 0;
 }
 
@@ -109,9 +109,6 @@
 @media screen and (max-width: 559px){
     #page-faq .faq-item {
         padding: 1.25rem 0.75rem;
-    }
-    #page-faq .faq-content {
-        margin-bottom: 2rem;
     }
 }
 
