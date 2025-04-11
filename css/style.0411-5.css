@@ -106,7 +106,11 @@
     margin-top: 1rem;
     border-radius: 6px;
 }
-
+@media screen and (max-width: 559px){
+    #page-faq .faq-item {
+        padding: 1.25rem 0.75rem;
+    }
+}
 
 /* page-form｜フォーム ************************************************************/
 
