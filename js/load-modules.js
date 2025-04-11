@@ -17,7 +17,7 @@ if (target) target.innerHTML = html;
 });
 
 // ナビゲーションモジュールを読み込み
-fetch('/modules/nav.html')
+fetch('/includes/nav.html')
   .then(res => res.text())
   .then(html => {
     const nav = document.querySelector('.module-nav');
