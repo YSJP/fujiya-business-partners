@@ -33,7 +33,7 @@
         flex-grow: 1;
         text-align: center;
     }
-    .logo {
+    .module-header-logo {
         margin: 0 auto;
         width: 120px;
         max-width: 100%;
