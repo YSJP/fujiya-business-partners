@@ -1,0 +1,45 @@
+/* P-home｜ホーム */
+
+
+/* P-privacy｜プライバシーポリシー */
+    #privacy dt {
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    #privacy dd {
+        text-align: left;
+    }
+    #privacy .ol_list {
+        margin-top: 1rem;
+        text-align: left;
+    }
+
+/* P-form｜フォーム*/
+
+    #form .redirect-box {
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+    }
+
+    #form .redirect-box p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    #form .loader {
+        margin: 30px auto;
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #333;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
