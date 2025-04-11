@@ -110,6 +110,9 @@
     #page-faq .faq-item {
         padding: 1.25rem 0.75rem;
     }
+    #page-faq .faq-content {
+        margin-bottom: 2rem;
+    }
 }
 
 /* page-form｜フォーム ************************************************************/
