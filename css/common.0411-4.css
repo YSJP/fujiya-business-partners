@@ -13,6 +13,7 @@
         position: relative;
     }
     .container {
+        position: relative;
         max-width: 600px;
         padding: 30px;
         border: none;
@@ -40,11 +41,11 @@
 
     /* ハンバーガーアイコン */
     .menu-toggle {
-        position: fixed;
+        position: absolute;
         top: 20px;
         right: 20px;
-        z-index: 1001;
-        cursor: pointer;
+        z-index: 10;
+        cursor: pointer
     }
     .menu-toggle span {
         display: block;
