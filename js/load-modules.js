@@ -8,6 +8,14 @@ fetch('/includes/head.html')
     document.head.innerHTML = html + document.head.innerHTML;
   });
 
+// ロゴ（ヘッダー）読み込み
+fetch('/includes/logo.html')
+.then(res => res.text())
+.then(html => {
+const target = document.querySelector('.module-header-logo');
+if (target) target.innerHTML = html;
+});
+
 // フッター読み込み
 fetch('/includes/footer.html')
   .then(res => res.text())
