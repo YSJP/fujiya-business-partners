@@ -45,6 +45,60 @@
 <meta name="twitter:image" content="https://fujiya-bp.com/img/logo-fbp.png">
 
 <!-- スタイルシート -->
+
+<!-- クリティカルCSS（プリロードの上に配置） -->
+    <style>
+        /* ページ初期表示に必須のスタイル */
+        body {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        font-family: 'Noto Sans JP', sans-serif;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f9f9f9;
+        color: #7a7a7a;
+        position: relative;
+        }
+        .container {
+        position: relative;
+        max-width: 600px;
+        padding: 30px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background-color: #ffffff;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: calc(100vh - 5rem);
+        }
+        .module-header-logo {
+        margin: 0 auto;
+        width: 120px;
+        max-width: 100%;
+        height: auto;
+        }
+        .module-header-logo img {
+        width: 100%;
+        height: auto;
+        }
+        .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        flex-grow: 1;
+        text-align: center;
+        }
+        h1 {
+        font-size: 1.5rem;
+        }
+    </style>
+
     <!-- Bootstrap のプリロード＋適用 -->
     <link
     rel="preload"
