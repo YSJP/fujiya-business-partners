@@ -1,0 +1,1 @@
+C:/Users/TFG152/Documents/Git/LLM-Rules/copilot-instructions.md
