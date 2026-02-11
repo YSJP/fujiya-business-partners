@@ -53,3 +53,14 @@
 - Approach: Create `AGENTS.md` in repository root and define approval gate rule in clear Japanese wording. <!-- 方針: ルートに `AGENTS.md` を新規作成し、承認ゲート規則を明確な日本語で定義する。 -->
 - Visibility control: Add `AGENTS.md` to `_config.yml` `exclude` so it is not published on GitHub Pages. <!-- 公開制御: `_config.yml` の `exclude` に `AGENTS.md` を追加し、GitHub Pages公開対象外にする。 -->
 - Validation: Confirm `AGENTS.md` exists and `_config.yml` includes `AGENTS.md`. <!-- 検証: `AGENTS.md` の作成と `_config.yml` への `AGENTS.md` 追加を確認する。 -->
+
+## Task: Consolidate operational documents under one private directory for Pages <!-- タスク: Operational文書を1つの非公開ディレクトリに集約 -->
+- Goal: Move operational Markdown files into a single directory and exclude that directory from GitHub Pages output. <!-- 目的: 運用用Markdownを1ディレクトリへ移動し、そのディレクトリをGitHub Pages公開出力から除外する。 -->
+- Rationale: Jekyll supports excluding directories/files via `_config.yml` `exclude`, so directory-based exclusion is valid. <!-- 根拠: Jekyll は `_config.yml` の `exclude` でディレクトリ/ファイル除外をサポートしており、ディレクトリ単位除外は有効。 -->
+- Target directory: `ops/` (contains `ops/README.md`, `ops/plan.md`, `ops/context.md`, `ops/AGENTS.md`). <!-- 対象ディレクトリ: `ops/`（`ops/README.md`, `ops/plan.md`, `ops/context.md`, `ops/AGENTS.md` を格納）。 -->
+- Config change: Replace per-file exclusions with a directory exclusion entry `ops/` in `_config.yml`. <!-- 設定変更: `_config.yml` の個別除外を `ops/` ディレクトリ除外へ置換する。 -->
+- Guardrail: Keep `.nojekyll` absent, because `.nojekyll` bypasses Jekyll processing and would invalidate `exclude`-based control. <!-- 注意点: `.nojekyll` は追加しない。Jekyll処理をバイパスし、`exclude` 制御が無効化されるため。 -->
+- Validation 1: Confirm moved files are tracked at `ops/*` and removed from repository root. <!-- 検証1: 対象ファイルが `ops/*` に移動され、ルートから除去されていることを確認。 -->
+- Validation 2: Confirm `_config.yml` contains `exclude: - ops/`. <!-- 検証2: `_config.yml` に `exclude: - ops/` が含まれることを確認。 -->
+- Validation 3: After deployment, verify `https://fujiya-bp.com/ops/plan.md` returns 404. <!-- 検証3: デプロイ後に `https://fujiya-bp.com/ops/plan.md` が 404 になることを確認。 -->
+- Note: This controls Pages output, not repository visibility; if repository is public, files remain visible on GitHub UI. <!-- 注記: これはPages出力制御であり、リポジトリ可視性の制御ではない。publicリポジトリではGitHub上で閲覧可能。 -->
