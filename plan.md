@@ -47,3 +47,9 @@
 - Guardrail: Do not add `.nojekyll`, because that bypasses Jekyll exclude processing. <!-- 注意点: `.nojekyll` は追加しない（Jekyllの除外設定が効かなくなるため）。 -->
 - Validation: Confirm `_config.yml` exists, includes exclusion entries, and `.nojekyll` is absent. <!-- 検証: `_config.yml` の存在と除外設定、および `.nojekyll` が無いことを確認する。 -->
 - Finalization: Update `context.md`, commit, and push to `main`. <!-- 最終化: `context.md` を更新し、コミットして `main` へ push する。 -->
+
+## Task: Enforce explicit user approval before implementation and git operations <!-- タスク: 実装前・Git操作前に明示承認を必須化 -->
+- Goal: Add repository-level rule that Codex must not perform implementation, file edits, commit, or push without explicit user approval. <!-- 目的: Codex がユーザーの明示承認なしに実装、ファイル編集、commit、push を実行しないルールをリポジトリ規約として追加する。 -->
+- Approach: Create `AGENTS.md` in repository root and define approval gate rule in clear Japanese wording. <!-- 方針: ルートに `AGENTS.md` を新規作成し、承認ゲート規則を明確な日本語で定義する。 -->
+- Visibility control: Add `AGENTS.md` to `_config.yml` `exclude` so it is not published on GitHub Pages. <!-- 公開制御: `_config.yml` の `exclude` に `AGENTS.md` を追加し、GitHub Pages公開対象外にする。 -->
+- Validation: Confirm `AGENTS.md` exists and `_config.yml` includes `AGENTS.md`. <!-- 検証: `AGENTS.md` の作成と `_config.yml` への `AGENTS.md` 追加を確認する。 -->

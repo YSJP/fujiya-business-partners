@@ -4,3 +4,4 @@ exclude:
   - README.md
   - plan.md
   - context.md
+  - AGENTS.md
