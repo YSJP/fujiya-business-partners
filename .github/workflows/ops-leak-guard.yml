@@ -1,0 +1,35 @@
+name: ops-leak-guard
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Block tracked ops and forbidden root docs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          tracked_files="$(git ls-files)"
+
+          if echo "$tracked_files" | grep -q '^ops/'; then
+            echo 'Error: tracked files under ops/ are not allowed in public repo.'
+            exit 1
+          fi
+
+          forbidden_root_files=("README.md" "plan.md" "context.md" "AGENTS.md")
+          for f in "${forbidden_root_files[@]}"; do
+            if echo "$tracked_files" | grep -qx "$f"; then
+              echo "Error: forbidden root file tracked: $f"
+              exit 1
+            fi
+          done
+
+          echo 'ops-leak-guard passed.'
