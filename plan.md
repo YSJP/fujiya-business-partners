@@ -37,3 +37,13 @@
 ## Notes for next Codex <!-- 次のCodexへの注意 -->
 - Follow AGENTS.md: plan -> approval -> implementation. <!-- AGENTS.mdに従い、計画->承認->実装の順序を守る。 -->
 - Report any plan updates with a clickable link: `[plan.md](plan.md)`. <!-- 計画更新報告はクリック可能リンク `[plan.md](plan.md)` を使う。 -->
+
+---
+
+## Task: Hide operational Markdown documents from GitHub Pages output <!-- タスク: OperationalなMarkdown文書をGitHub Pages公開物から除外 -->
+- Goal: Keep documents in Git repository but prevent web visitors from opening them via `https://fujiya-bp.com/*.md`. <!-- 目的: 文書はGit管理に残しつつ、`https://fujiya-bp.com/*.md` で閲覧できない状態にする。 -->
+- Target documents: `README.md`, `plan.md`, `context.md` (+ optional similar ops docs). <!-- 対象文書: `README.md`, `plan.md`, `context.md`（必要に応じて同種の運用文書）。 -->
+- Approach: Add Jekyll config `_config.yml` with `exclude` entries for operational docs. <!-- 方針: Jekyll設定 `_config.yml` を追加し、`exclude` で運用文書を除外する。 -->
+- Guardrail: Do not add `.nojekyll`, because that bypasses Jekyll exclude processing. <!-- 注意点: `.nojekyll` は追加しない（Jekyllの除外設定が効かなくなるため）。 -->
+- Validation: Confirm `_config.yml` exists, includes exclusion entries, and `.nojekyll` is absent. <!-- 検証: `_config.yml` の存在と除外設定、および `.nojekyll` が無いことを確認する。 -->
+- Finalization: Update `context.md`, commit, and push to `main`. <!-- 最終化: `context.md` を更新し、コミットして `main` へ push する。 -->
