@@ -11,7 +11,8 @@ import SiteLayout from "../layouts/SiteLayout.astro";
   ogDescription="長野市を拠点とする独立系ビジネス支援会社のFAQページです。"
   ogPath="/faq/"
 >
-  <h1 class="faq-heading">よくあるご質問<span>（FAQ）</span></h1>
+  <div class="faq-content">
+  <h1 class="site-title faq-heading">よくあるご質問<span>（FAQ）</span></h1>
   <p class="faq-intro">当社に多く寄せられるご質問とその回答をまとめました。</p>
 
   <section class="faq-section">
@@ -24,6 +25,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
       </div>
     </div>
   </section>
+  </div>
 
   <script is:inline>
     document.querySelectorAll("#page-faq .faq-question").forEach((button) => {

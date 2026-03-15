@@ -1,1 +1,3 @@
 ops/
+.playwright-cli/
+output/

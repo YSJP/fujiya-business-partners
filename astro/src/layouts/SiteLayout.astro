@@ -30,19 +30,19 @@ const { bodyId, title, description, keywords, ogTitle, ogDescription, ogPath } =
       ogPath={ogPath}
     />
   </head>
-  <body id={bodyId} class="flex min-h-screen flex-wrap items-center justify-center p-5">
+  <body id={bodyId} class="site-body">
     <div class="emboss-background"></div>
-    <div class="page-shell container">
+    <div class="site-container">
       <div class="module-nav">
         <NavMenu />
       </div>
-      <div class="module-header-logo mx-auto h-auto max-w-full">
+      <div class="module-header-logo">
         <Logo />
       </div>
-      <main class="page-main main-content">
+      <main class="site-main">
         <slot />
       </main>
-      <div class="footer">
+      <div class="site-footer">
         <SiteFooter />
       </div>
     </div>
