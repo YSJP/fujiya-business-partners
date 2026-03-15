@@ -1,0 +1,53 @@
+---
+import NavMenu from "../components/NavMenu.astro";
+import Logo from "../components/Logo.astro";
+import SeoHead from "../components/SeoHead.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/global.css";
+
+interface Props {
+  bodyId: string;
+  title: string;
+  description: string;
+  keywords: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogPath?: string;
+}
+
+const { bodyId, title, description, keywords, ogTitle, ogDescription, ogPath } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <SeoHead
+      title={title}
+      description={description}
+      keywords={keywords}
+      ogTitle={ogTitle}
+      ogDescription={ogDescription}
+      ogPath={ogPath}
+    />
+  </head>
+  <body id={bodyId} class="flex min-h-screen flex-wrap items-center justify-center p-5">
+    <div class="emboss-background"></div>
+    <div class="page-shell container">
+      <div class="module-nav">
+        <NavMenu />
+      </div>
+      <div class="module-header-logo mx-auto h-auto max-w-full">
+        <Logo />
+      </div>
+      <main class="page-main main-content">
+        <slot />
+      </main>
+      <div class="footer">
+        <SiteFooter />
+      </div>
+    </div>
+    <div class="bg-img">
+      <img src="/img/whats_next.png" alt="What's Next Image" />
+    </div>
+  </body>
+</html>

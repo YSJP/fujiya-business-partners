@@ -1,0 +1,31 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+
+<SiteLayout
+  bodyId="page-form"
+  title="お問い合わせフォーム｜Fujiya Business Partners 株式会社"
+  description="お問い合わせフォーム。Fujiya Business Partners 株式会社へのお問い合わせは、こちらのページからリダイレクトされるGoogleフォームをご利用ください。"
+  keywords="Fujiya Business Partners, お問い合わせフォーム, 連絡先"
+  ogTitle="Fujiya Business Partners"
+  ogDescription="長野市を拠点とする独立系ビジネス支援会社。"
+  ogPath="/form/"
+>
+  <h1 class="faq-heading">お問い合わせ<span>フォーム</span></h1>
+  <div class="redirect-box">
+    <p>
+      お問い合わせフォームの<br />
+      最新のURLにリダイレクト中です...
+    </p>
+    <div class="loader"></div>
+  </div>
+
+  <script is:inline>
+    setTimeout(() => {
+      const queryString = window.location.search;
+      const baseURL = "https://forms.gle/sM2a2xf3QCdKRvLa6";
+      const redirectURL = queryString ? `${baseURL}${queryString}` : baseURL;
+      window.location.href = redirectURL;
+    }, 1400);
+  </script>
+</SiteLayout>

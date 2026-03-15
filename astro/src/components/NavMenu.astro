@@ -1,0 +1,55 @@
+---
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: "/", label: "会社概要" },
+  { href: "/faq/", label: "よくあるご質問" },
+  { href: "/form/", label: "お問い合わせ" },
+  { href: "/privacy/", label: "プライバシーポリシー" },
+];
+---
+
+<div class="menu-toggle" id="menuToggle">
+  <span></span><span></span><span></span>
+</div>
+
+<div class="fullscreen-menu" id="fullscreenMenu">
+  <button class="menu-close" id="menuClose" aria-label="メニューを閉じる">×</button>
+  <nav class="menu-nav">
+    <ul>
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href} aria-current={currentPath === link.href ? "page" : undefined}>
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</div>
+
+<script is:inline>
+  const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("fullscreenMenu");
+  const closeBtn = document.getElementById("menuClose");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    });
+  }
+
+  if (closeBtn && menu) {
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+  }
+</script>
